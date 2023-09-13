@@ -55,6 +55,7 @@ export class SobreComponent implements OnInit {
       const imagem = this.imagensRegiao.filter((resImagem: any) => resImagem.nome === resEstados)
       dataSanitizada.push({ 'regiao': resEstados, 'filtro': filter, "imagem": imagem });
     });
+    console.log(dataSanitizada)
     this.showData = dataSanitizada
   }
 }
