@@ -1,0 +1,25 @@
+<div class="body">
+  <p>Quantidade de Unidades Federativas: {{ qntEstados }}</p>
+  <div *ngFor="let data of showData">
+    <p class="titulo">{{ data["regiao"] }}</p>
+    <div class="row">
+      <div class="card tooltip" *ngFor="let local of data['filtro']">
+        <p>{{ local["nome"] }}</p>
+        <span class="tooltiptext">
+          <ul>
+            <li>{{ local["sigla"] }}</li>
+            <li>{{ local["regiao"]["nome"] }}</li>
+            <li>
+              <img
+                width="150px"
+                height="100px"
+                src="{{data['imagem'][0]['imagem']}}"
+                alt="norte"
+              />
+            </li>
+          </ul>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
